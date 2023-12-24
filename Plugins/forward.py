@@ -24,18 +24,7 @@ from config import Config
 #    await tera.reply_to_message.delete()
 #    await tera.delete()
 
-@channelforward.on_message(filters.user(5792964753) & filters.private & filters.text & filters.command("check", prefixes="."))
-async def check_command(client, message):
-    user = message.from_user.first_name
-    don=await message.reply(f"Hey {user}, Bot Is Alive.....!")
-    await asyncio.sleep(5)
-    await don.delete()
-@channelforwardbot.on_message(filters.user(5792964753) & filters.private & filters.text & filters.command("check", prefixes="."))
-async def check_command(client, message):
-    user = message.from_user.first_name
-    don=await message.reply(f"Hey {user}, Bot Is Alive.....!")
-    await asyncio.sleep(5)
-    await don.delete()
+
 @channelforward.on_message(filters.user(5792964753) & filters.group & filters.text & filters.command("check", prefixes="."))
 async def check_command(client, message):
     user = message.from_user.first_name
@@ -58,7 +47,7 @@ async def forward(client, message):
          from_channel, to_channel = id.split(":")
          if int(to_channel) == int(to_channel):
             func = message.copy
-            await asyncio.sleep(2)
+            await asyncio.sleep(0.7)
             await func(int(to_channel))
             logger.info("Forwarded a message from", from_channel, "to", to_channel)
    except Exception as e:
@@ -72,7 +61,7 @@ async def forward(client, message):
          from_channel, to_channel = id.split(":")
          if int(to_channel) == int(to_channel):
             func = message.copy
-            await asyncio.sleep(2)
+            await asyncio.sleep(0.6)
             await func(int(to_channel))
             logger.info("Forwarded a message from", from_channel, "to", to_channel)
    except Exception as e:
