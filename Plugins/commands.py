@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 
 from pyrogram import filters, Client, enums
 from bot import channelforward
+from bot import channelforwardbot
 from config import Config
 from translation import Translation
 import asyncio
@@ -26,7 +27,13 @@ async def start(client, message):
         disable_web_page_preview=True,
         quote=True
     )
-
+@channelforwardbot.on_message(filters.command("check") & filters.private & filters.incoming)
+async def start(client, message):
+    await message.reply(
+        text=Translation.START,
+        disable_web_page_preview=True,
+        quote=True
+    )
 ################################################################################################################################################################################################################################################
 # about command
 
