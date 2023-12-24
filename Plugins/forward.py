@@ -10,6 +10,7 @@ import asyncio
 import time
 from pyrogram import filters, Client, enums
 from bot import channelforward
+from bot import channelforwardbot
 from pyrogram.errors import FloodWait
 from config import Config
 
