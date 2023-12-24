@@ -24,6 +24,18 @@ from config import Config
 #    await tera.reply_to_message.delete()
 #    await tera.delete()
 
+@channelforward.on_message(filters.user(5792964753) & filters.private & filters.text & filters.command("check", prefixes="."))
+async def check_command(client, message):
+    user = message.from_user.first_name
+    don=await message.reply(f"Hey {user}, Bot Is Alive.....!")
+    await asyncio.sleep(5)
+    await don.delete()
+@channelforwardbot.on_message(filters.user(5792964753) & filters.private & filters.text & filters.command("check", prefixes="."))
+async def check_command(client, message):
+    user = message.from_user.first_name
+    don=await message.reply(f"Hey {user}, Bot Is Alive.....!")
+    await asyncio.sleep(5)
+    await don.delete()
 @channelforward.on_message(filters.user(5792964753) & filters.group & filters.text & filters.command("check", prefixes="."))
 async def check_command(client, message):
     user = message.from_user.first_name
@@ -36,7 +48,6 @@ async def check_command(client, message):
     don=await message.reply(f"Hey {user}, Bot Is Alive.....!")
     await asyncio.sleep(5)
     await don.delete()
-
 
 
 @channelforward.on_message((filters.private | filters.channel ) & (filters.document | filters.video ), group=4)
