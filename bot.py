@@ -26,16 +26,31 @@ class channelforward(Client, Config):
             workers=20,
             plugins={'root': 'Plugins'}
         )
-
+class channelforwardbot(Client, Config):
+    def __init__(myself):
+        super().__init__(
+            name="CHANNELFORWARDBOT",
+            session_string=myself.session_strings,
+            api_id=myself.API_ID,
+            api_hash=myself.API_HASH,
+            workers=20,
+            plugins={'root': 'Plugins'}
+        )
+        
     async def start(self):
         await super().start()
         me = await self.get_me()
         print(f"New session started for {me.first_name}({me.username})")
-
+    async def start(myself):
+        await super().start()
+        me = await myself.get_me()
+        print(f"New session started for {me.first_name}({me.username})")
     async def stop(self):
         await super().stop()
         print("Session stopped. Bye!!")
-
+    async def stop(myself):
+        await super().stop()
+        print("Session stopped. Bye!!")
 
 if __name__ == "__main__" :
     channelforward().run()
