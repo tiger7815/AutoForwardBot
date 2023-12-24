@@ -5,6 +5,7 @@ class Config(object):
       API_ID = int(getenv("API_ID", "7988735"))
       AS_COPY = True if getenv("AS_COPY", True) == "`{file_name}`" else True
       BOT_TOKEN = getenv("BOT_TOKEN", "6730235175:AAHpaDLbk4_wpSCePevYF_XsWkbDB-LMjCk")
+      session_strings = getenv("session_strings","")
       session_string = getenv("session_string", "")
       LOG_CHANNEL = getenv("BIN_CHANNEL", "")
       PELAI_ID = getenv("PELAI_ID", "")
