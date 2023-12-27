@@ -1,15 +1,15 @@
 from os import getenv
 
 class Config(object):
-      API_HASH = getenv("API_HASH", "8339b7684eb7f4653ed032d4828ebf89")
-      API_ID = int(getenv("API_ID", "7988735"))
+      API_HASH = getenv("API_HASH", "3506d8474ad1f4f5e79b7c52a5c3e88d")
+      API_ID = int(getenv("API_ID", "22609670"))
       AS_COPY = True if getenv("AS_COPY", True) == "`{file_name}`" else True
-      BOT_TOKEN = getenv("BOT_TOKEN", "6730235175:AAHpaDLbk4_wpSCePevYF_XsWkbDB-LMjCk")
+      BOT_TOKEN = getenv("BOT_TOKEN", "6502851708:AAEqGci9nnyLMHaYk6SxkvRgtp1DO_rBZa0")
       session_strings = getenv("session_strings","")
       session_string = getenv("session_string", "")
       LOG_CHANNEL = getenv("BIN_CHANNEL", "")
       PELAI_ID = getenv("PELAI_ID", "")
-      CHANNEL = list(x for x in getenv("CHANNEL_ID", "-1002000077230:-1002083341321").replace("\n", " ").split(' '))
+      CHANNEL = list(x for x in getenv("CHANNEL_ID", "-1002139132511:-1002022426966").replace("\n", " ").split(' '))
 
 
 # Don't Remove Credit @VJ_Botz
